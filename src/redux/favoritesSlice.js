@@ -18,8 +18,10 @@ const favoritesSlice = createSlice({
       );
 
       if (existingIndex !== -1) {
+        // Recipe already exists → remove it
         state.favoriterecipes.splice(existingIndex, 1);
       } else {
+        // Recipe doesn't exist → add it
         state.favoriterecipes.push(recipe);
       }
     },
